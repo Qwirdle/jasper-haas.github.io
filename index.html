@@ -2,12 +2,41 @@
 <html>
   
 <head>
-<title>Page Title</title>
+  <title>Qwirdle</title>
+  <link rel="stylesheet" href="stylesheet.css">
 </head>
   
-<body>
-  <h1>This is a Heading</h1>
-  <p>This is a paragraph.</p>
+<body onload="typeWriter();">
+  <div class="center-div">
+    <div class="windowHeader">
+      <p>Terminal</p>
+      <p>X</p>
+    </div>
+
+    <div class="window">
+      <h2 id="welcome"></h2>
+      <p>cd <a href="homepage.html">C:\Portfolio\homepage.html</a></p>
+    </div>
+  </div>
+
+  <script defer>
+  var i = 0;
+  var txt = "Hi, I'm Qwirdle. Welcome to my portfolio :)";
+  var speed = 40;
+
+  function typeWriter() {
+    if (i < txt.length) {
+      if (i == 3) {
+        setTimeout(typeWriter, 1);
+      }
+
+      document.getElementById("welcome").innerHTML += txt.charAt(i);
+      i++;
+      setTimeout(typeWriter, speed);
+    }
+  }
+  </script>
+
 </body>
   
 </html>
