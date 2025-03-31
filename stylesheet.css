@@ -10,7 +10,27 @@ html, body {
 
     color: white;
     background-color: black;
+
+    width: 100%;
+    height: fit-content;
+    min-height: 100vh;
+
+    overflow-x: hidden;
   }
+
+body {
+    background-image: url("background.jpg");
+    background-size: stretch;
+    background-position: center;
+    background-attachment: fixed;
+}
+
+html {
+    background-image: url("background.jpg");
+    background-size: stretch;
+    background-position: center;
+    background-attachment: fixed;
+}
   
 .center-div {
   width: fit-content;
@@ -18,11 +38,46 @@ html, body {
   text-align: left;
 }
 
+.gallery {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    background-color: rgba(255, 255, 255, 0.201);
+    margin: 5px;
+    width: 100%;
+    flex-wrap: wrap;
+}
+
+.gallery p {
+    margin-left: 8px;
+}
+
+.gallery-item {
+    width: 340px;
+    height: fit-content;
+    text-align: center;
+    padding: 5px;
+    margin: 5px;
+    background-color: rgba(0, 0, 0, 0.5);
+}
+
+.gallery-img {
+    width: 340px;
+    height: auto;
+}
+
+.gallery-item-title {
+    width: 100%;
+    text-align: center;
+}
+
 .window {
-    width: 700px;
+    width: 740px;
     padding: 20px;
     padding-top: 5px;
     border: 1px solid white;
+
+    background: rgba(0, 0, 0, 0.5);
 }
 
 .window p {
@@ -31,9 +86,12 @@ html, body {
 
 .windowHeader {
     margin-top: 15px;
+    padding-left: 5px;
     border: 1px solid white;
     display: flex;
     justify-content: space-between;
+
+    background: rgba(0, 0, 0, 0.5);
 }
 
 .noMargin {
